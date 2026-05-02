@@ -36,6 +36,7 @@ yarn-error.log*
 # markdown files
 *.md
 !CHANGELOG.md
+!USER_GUIDE.md
 
 # vercel
 .vercel
