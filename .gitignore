@@ -33,8 +33,26 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# markdown files
+*.md
+!CHANGELOG.md
+
 # vercel
 .vercel
+
+# claude
+.claude/
+
+# local scratchpad — not tracked
+/app/test/
+/app/test2/
+/app/test3/
+/public/iphone_17_pro_max/
+/public/iphone_17_pro_max.zip
+/public/monochrome_studio_02_1k.exr
+/LOTAmarketingAssests/
+/lotamessages/
+/marketingassests/
 
 # typescript
 *.tsbuildinfo
