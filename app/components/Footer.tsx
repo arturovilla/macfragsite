@@ -1,0 +1,114 @@
+import Image from "next/image";
+import { FaLinkedinIn, FaInstagram, FaPatreon, FaRedditAlien } from "react-icons/fa";
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-white/[0.06] bg-black">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+          {/* Logo + tagline + author + socials */}
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <Image
+                src="/icon.png"
+                alt="Mac Frag"
+                width={28}
+                height={28}
+                className="rounded-lg"
+              />
+              <span className="text-lg font-semibold text-white tracking-tight">
+                Mac Frag
+              </span>
+            </div>
+            <p className="text-sm text-zinc-600 leading-relaxed">
+              A native macOS playground for writing Metal Shading Language
+              fragment shaders with a live preview.
+            </p>
+            <p className="text-sm text-zinc-600 mt-3">
+              Created by{" "}
+              <a
+                href="https://www.rtvro.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-white transition-colors"
+              >
+                Arturo Villalobos
+              </a>
+              {" "}(AKA{" "}
+              <a
+                href="https://www.instagram.com/hyprtexture/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-white transition-colors"
+              >
+                Hyprtexture
+              </a>
+              )
+            </p>
+            <div className="flex items-center gap-3 mt-4">
+              <a
+                href="https://www.linkedin.com/in/rtvro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-zinc-600 hover:text-white transition-colors"
+              >
+                <FaLinkedinIn size={14} />
+              </a>
+              <a
+                href="https://instagram.com/hyprtexture"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-zinc-600 hover:text-white transition-colors"
+              >
+                <FaInstagram size={14} />
+              </a>
+              <a
+                href="https://patreon.com/hyprtexture"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Patreon"
+                className="text-zinc-600 hover:text-white transition-colors"
+              >
+                <FaPatreon size={14} />
+              </a>
+              <a
+                href="https://www.reddit.com/user/lpyonderboy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Reddit"
+                className="text-zinc-600 hover:text-white transition-colors"
+              >
+                <FaRedditAlien size={14} />
+              </a>
+            </div>
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-col gap-2.5">
+            <span className="text-xs font-mono text-zinc-700 uppercase tracking-[0.15em] mb-1">
+              Navigate
+            </span>
+            <a href="/docs" className="text-sm text-zinc-500 hover:text-white transition-colors">
+              Docs
+            </a>
+            <a href="/changelog" className="text-sm text-zinc-500 hover:text-white transition-colors">
+              Changelog
+            </a>
+            <a href="/privacy" className="text-sm text-zinc-500 hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <div className="flex flex-col items-start md:items-end gap-4">
+            <p className="text-xs text-zinc-700">
+              &copy; {new Date().getFullYear()} Mac Frag. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
